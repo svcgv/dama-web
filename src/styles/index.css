@@ -30,9 +30,7 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
 }*/
 
 .all{
-  max-width: 1000px;
-  min-width: 800px;
-  height: 500px;    /*高度自设*/
+  height: 100vh;    /*高度自设*/
   display: flex;
   background: gray;
 }
