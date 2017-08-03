@@ -23,16 +23,21 @@ export default class Info extends React.Component{
 
     render() {
         return (
-        <div className = "box">
-            <div className="navigation">
-                <Menu />
+        <div className="all">
+            <div className="left">
+                <div className="self">self</div>
+                <div className="group">group</div>
+                <div className="menu"><Menu /></div>
+                <div className="tools"><Tools /></div>
             </div>
-            <div className="box1">
-                <div>
-                    <Tools />
-                </div>
-                <div>
-                    <Talk />
+            <div className="right">
+                <div className="header">header</div>
+                <div className="section-wraper">
+                    <div className="content-wraper">
+                        <div className="stat">stat</div>
+                        <div className="talk"><Talk /></div>
+                    </div>
+                    <div className="offset">offset</div>
                 </div>
             </div>
         </div>
