@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+/*@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,700);
+@import url(https://fonts.googleapis.com/css?family=Signika);
+@import url(https://fonts.googleapis.com/css?family=Kalam);*/
+
+html {
+  font-family: 'Source Sans Pro', 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    margin:0;
+    padding:0;
+}
+
+/*.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 250px;
+  height: 100%;
+  padding-top: 40px;
+  padding-left: 15px;
+  padding-bottom: 2em;
+  margin-top:1em;
+  overflow-x: scroll;
+}*/
+
+/*.box{
+  display: flex;
+  flex-direction:row;
+  flex-wrap: nowrap;
+  align-items:stretch;
+}
+
+.box1{
+  display: flex;
+  flex-direction:column;
+}*/
