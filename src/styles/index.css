@@ -29,14 +29,69 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
   overflow-x: scroll;
 }*/
 
-/*.box{
+.all{
+  max-width: 1000px;
+  min-width: 800px;
+  height: 500px;    /*高度自设*/
   display: flex;
-  flex-direction:row;
-  flex-wrap: nowrap;
-  align-items:stretch;
+  background: gray;
+}
+/*左边布局*/
+.left{
+  flex:0 0 200px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.self{
+  width:100%;
+  height:50px;
+  background:lime;
+}
+.group{
+  width:100%;
+  height:150px;
+  background:pink;
+}
+.menu{
+  width:100%;
+  flex:1;
+  background:yellow;
+}
+.tools{
+  flex: 0 0 50px;
+  background: #eee;
 }
 
-.box1{
+/*右边布局*/
+.right{
+		flex:1;    
+		display: flex;
+    flex-flow: column nowrap;
+}
+.header{
+  width:100%;
+  height:100px;
+  background:purple;
+}
+.section-wraper{
+  flex:1;
   display: flex;
-  flex-direction:column;
-}*/
+}
+.content-wraper{
+  flex:1;
+  display: flex;
+  flex-flow:column nowrap;
+}
+.stat{
+  width:100%;
+  height: 50px;
+    background: lightblue;
+}
+.talk{
+  flex:1;
+}
+.offset{
+  flex:0 0 150px;
+  height: 100%;
+  background: green;
+}
