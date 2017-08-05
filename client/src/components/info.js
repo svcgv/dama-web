@@ -1,18 +1,17 @@
-import React from 'react';
-import { render } from 'react-dom';
-import { withRouter } from 'react-router-dom';
-import { inject, observer } from 'mobx-react';
-// import Button from 'material-ui/Button';
+import React,{ Component } from 'react'
+import { withRouter } from 'react-router-dom'
+import { inject, observer } from 'mobx-react'
+// import Button from 'material-ui/Button'
 
 import Menu from './menu'
 import Talk from './talk'
 import Tools from './tools'
-
+import channelContainer from './channel/channel-container'
 
 @withRouter
 @inject('store')
 @observer
-export default class Info extends React.Component {
+export default class Info extends Component {
     constructor(props) {
         super(props)
     }
@@ -24,6 +23,7 @@ export default class Info extends React.Component {
     render() {
         return (
             <div className="all">
+               <channelContainer />
                 <div className="left">
                     <div className="self">self</div>
                     <div className="group">group</div>

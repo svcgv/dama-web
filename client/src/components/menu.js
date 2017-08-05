@@ -1,28 +1,28 @@
-import React from 'react';
-import {render} from 'react-dom';
-import { withRouter } from 'react-router-dom';
-import { inject, observer } from 'mobx-react';
+import React, { Component } from 'react'
+import { render } from 'react-dom'
+import { withRouter } from 'react-router-dom'
+import { inject, observer } from 'mobx-react'
 
-import { withStyles, createStyleSheet } from 'material-ui/styles';
-import List, { ListItem, ListItemText } from 'material-ui/List';
-import Divider from 'material-ui/Divider';
+import { withStyles, createStyleSheet } from 'material-ui/styles'
+import List, { ListItem, ListItemText } from 'material-ui/List'
+import Divider from 'material-ui/Divider'
 
 const styleSheet = createStyleSheet(theme => ({
-  root: {
-    width: '100%',
-    maxWidth: '360px',
-    background: theme.palette.background.paper,
-  },
-}));
+    root: {
+        width: '100%',
+        maxWidth: '360px',
+        background: theme.palette.background.paper,
+    },
+}))
 
 @withStyles(styleSheet)
-export default class Menu extends React.Component{
+export default class Menu extends Component {
     constructor(props) {
         super(props)
     }
 
     render() {
-        const classes = this.props.classes;
+        const classes = this.props.classes
         return (
             <List className={classes.root}>
                 <ListItem button>
