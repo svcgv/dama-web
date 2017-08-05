@@ -1,0 +1,20 @@
+{
+  "name": "dama-miso",
+  "version": "0.0.1",
+  "description": "testing of server",
+  "main": "index.js",
+  "author": "dama",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.3.0",
+    "koa-body": "^2.3.0",
+    "koa-favicon": "^2.0.0",
+    "koa-logger": "^3.0.1",
+    "koa-router": "^7.2.1",
+    "koa-session": "^5.5.0",
+    "koa-static": "^4.0.1",
+    "koa-views": "^6.0.2",
+    "rxjs": "^5.4.2",
+    "socket.io": "^2.0.3"
+  }
+}
