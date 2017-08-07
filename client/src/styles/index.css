@@ -29,12 +29,16 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
   overflow-x: scroll;
 }*/
 
-.all{
+.global{
   height: 100vh;    /*高度自设*/
   display: flex;
-  background: gray;
 }
 /*左边布局*/
+.board{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 220px;
+}
 .left{
   flex:0 0 200px;
   display: flex;

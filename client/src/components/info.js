@@ -1,4 +1,4 @@
-import React,{ Component } from 'react'
+import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import { inject, observer } from 'mobx-react'
 // import Button from 'material-ui/Button'
@@ -6,7 +6,7 @@ import { inject, observer } from 'mobx-react'
 import Menu from './menu'
 import Talk from './talk'
 import Tools from './tools'
-import channelContainer from './channel/channel-container'
+import Board from './board/board'
 
 @withRouter
 @inject('store')
@@ -22,8 +22,8 @@ export default class Info extends Component {
 
     render() {
         return (
-            <div className="all">
-               <channelContainer />
+            <div className="global">
+                <Board />
                 <div className="left">
                     <div className="self">self</div>
                     <div className="group">group</div>
