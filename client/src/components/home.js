@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom'
 
 import Button from 'material-ui/Button'
 
-
+import Login from './login'
 
 @withRouter
 export default class Home extends Component {
@@ -34,6 +34,8 @@ export default class Home extends Component {
                 <Button onClick={this.fetchData}>
                     dama 究极进化
                 </Button>
+								<Login />
+
             </div>
         )
     }
