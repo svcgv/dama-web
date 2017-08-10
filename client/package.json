@@ -42,6 +42,6 @@
     "build": "node_modules/.bin/webpack",
     "server": "node_modules/.bin/webpack-dev-server",
     "pro": "node_modules/.bin/webpack --config webpack.config.production.js",
-    "postcss":"./node_modules/.bin/postcss"
+    "postcss": "./node_modules/.bin/postcss"
   }
 }
