@@ -62,7 +62,7 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
 
 /*右边布局*/
 .right{
-		flex:1;    
+		flex:1;
 		display: flex;
     flex-flow: column nowrap;
 }

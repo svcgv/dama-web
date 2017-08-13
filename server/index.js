@@ -5,7 +5,6 @@ const serve = require('koa-static');
 const Router = require('koa-router');
 const logger = require('koa-logger');
 const session = require('koa-session');
-const favicon = require('koa-favicon');
 // bodyParser = require('koa-bodyparser');
 
 const Server = require('socket.io')
@@ -28,11 +27,25 @@ router.get('/api/:app/:version', function (ctx, next) {
     ctx.body = str;
 })
 
+app.keys = ['dama'];
+
 app
   .use(logger())
-  .use(serve(__dirname + '/../mustard/dist'))
-  .use(views(__dirname + '/../mustard/dist',{ map: {html: 'nunjucks' }}))
-  // .use(favicon(__dirname + '/../mustard/dist/favicon.ico'))
+  .use(bodyParser())
+  .use(session(app))
+  .use(ctx => {
+      // ignore favicon
+    if (ctx.path === '/favicon.ico') return;
+
+    print()
+    let n = ctx.session.views || 0;
+    console.log(ctx.session)
+    ctx.session.views = ++n;
+    ctx.body = n + ' views';
+  })
+  .use(serve(__dirname + '/../client/dist'))
+  .use(views(__dirname + '/../client/dist',{ map: {html: 'nunjucks' }}))
+
   .use(router.routes())
   .use(router.allowedMethods());
 

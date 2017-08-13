@@ -1,7 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
-const HtmlWebpackPlugin = require('html-webpack-plugin'); 
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -27,6 +27,10 @@ module.exports = {
             plugins: ["transform-decorators-legacy","transform-class-properties"]
           }
         }
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader','css-loader','postcss-loader']
       }
     ]
   },
