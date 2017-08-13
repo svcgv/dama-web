@@ -1,6 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
-const HtmlWebpackPlugin = require('html-webpack-plugin'); 
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -9,7 +9,7 @@ module.exports = {
     'webpack-dev-server/client?http://localhost:9000',
     'webpack/hot/only-dev-server',
     path.resolve(__dirname, 'src/index.js')
-    ],
+  ],
   output: {
     path: __dirname + '/build',
     filename: 'bundle.js'
@@ -22,24 +22,28 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        use:{
+        use: {
           loader: 'babel-loader',
           options: {
             presets: ['es2017', 'react'],
-            plugins: ["transform-decorators-legacy","react-hot-loader/babel","transform-class-properties"]
+            plugins: ["transform-decorators-legacy", "react-hot-loader/babel", "transform-class-properties"]
           }
         }
       },
       {
+        test: /\.scss$/,
+        use:['style-loader','css-loader','sass-loader']
+      },
+      {
         test: /\.css$/,
-        use: ['style-loader','css-loader','postcss-loader']
+        use: ['style-loader', 'css-loader']
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-        title: 'dama web',
-        filename: 'index.html',
+      title: 'dama web',
+      filename: 'index.html',
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
