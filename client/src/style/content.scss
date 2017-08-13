@@ -1,0 +1,9 @@
+.content {
+  display: flex;
+  flex-flow: column nowrap;
+  .stat {
+    flex-basis: 100px;
+    color: #999;
+    background: #A9EEE6;
+  }
+}

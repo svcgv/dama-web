@@ -3,8 +3,8 @@ import { render } from 'react-dom'
 import { inject, observer } from 'mobx-react'
 import { Switch, BrowserRouter, Route } from 'react-router-dom'
 
-import Home from '../components/home'
-import Info from '../components/info'
+import Home from '../component/home'
+import Info from '../component/info'
 
 // @inject("store")
 // @observer
