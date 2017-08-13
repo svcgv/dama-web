@@ -7,7 +7,7 @@ import { AppContainer } from 'react-hot-loader';
 import App from './router'
 
 import Store from './store'
-import './styles/index.css'
+import './styles/index.scss'
 
 const store = new Store()
 // store.start()

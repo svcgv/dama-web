@@ -19,8 +19,6 @@
     "html-webpack-plugin": "^2.29.0",
     "material-ui": "next",
     "mobx-react-devtools": "^4.2.15",
-    "postcss-cli": "^4.1.0",
-    "postcss-loader": "^2.0.6",
     "prop-types": "^15.5.10",
     "react-tap-event-plugin": "^2.0.1",
     "rxjs": "^5.4.2",
@@ -41,7 +39,6 @@
   "scripts": {
     "build": "node_modules/.bin/webpack",
     "server": "node_modules/.bin/webpack-dev-server",
-    "pro": "node_modules/.bin/webpack --config webpack.config.production.js",
-    "postcss": "./node_modules/.bin/postcss"
+    "pro": "node_modules/.bin/webpack --config webpack.config.production.js"
   }
 }
