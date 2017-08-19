@@ -1,11 +1,19 @@
-import React,{Component} from 'react'
+import React, { Component } from 'react'
 import { render } from 'react-dom'
 import { withRouter } from 'react-router-dom'
+import { withStyles, createStyleSheet } from 'material-ui/styles';
 
 import Button from 'material-ui/Button'
 
 import Login from './login'
 
+const styleSheet = createStyleSheet(theme => ({
+    outWrapper: {
+        textAlign: 'center'
+    }
+}));
+
+@withStyles(styleSheet)
 @withRouter
 export default class Home extends Component {
     constructor(props) {
@@ -26,16 +34,19 @@ export default class Home extends Component {
     }
 
     render() {
-        return (
-            <div>
-                <Button onClick={this.handleClick}>
-                    dama 超进化
-                </Button>
-                <Button onClick={this.fetchData}>
-                    dama 究极进化
-                </Button>
-								<Login />
+        const classes = this.props.classes;
 
+        return (
+            <div className={classes.outWrapper}>
+                <div>
+                    <Button onClick={this.handleClick}>
+                        dama 超进化
+                    </Button>
+                    <Button onClick={this.fetchData}>
+                        dama 究极进化
+                    </Button>
+                </div>
+                <Login />
             </div>
         )
     }

@@ -1,43 +1,41 @@
 @charset 'utf-8';
-
 // import scss here
 @import 'board.scss';
 @import 'content.scss';
 @import 'offset.scss';
 @import 'header.scss';
-
 // global css config
 body {
-  font-family: 'Work Sans', 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', Arial, Verdana, sans-serif;
+    font-family: 'Work Sans', 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', Arial, Verdana, sans-serif;
+}
+
+body,
+html {
+    height: 100%;
 }
 
 .client {
-  height: 100vh;
-  display: flex;
-
-  .left {
-    flex: 0 0 200px;
+    height: 100vh;
     display: flex;
-    flex-flow: column nowrap;
-  }
-
-  .right {
-    flex: 1;
-    display: flex;
-    flex-flow: column nowrap;
-
-    .right-top {}
-
-    .right-bottom {
-      display: flex;
-      flex: 1;
-
-      .content {
-        flex: 1;
-        min-width: 720px;
-        color: #ccc;
-        background: #464545;
-      }
+    .left {
+        flex: 0 0 200px;
+        display: flex;
+        flex-flow: column nowrap;
     }
-  }
+    .right {
+        flex: 1;
+        min-width: 750px;
+        display: flex;
+        flex-flow: column nowrap;
+        .right-top {}
+        .right-bottom {
+            display: flex;
+            flex: 1;
+            .content {
+                flex: 1;
+                color: #ccc;
+                background: #464545;
+            }
+        }
+    }
 }
