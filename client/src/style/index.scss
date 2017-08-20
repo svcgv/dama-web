@@ -4,15 +4,17 @@
 @import 'content.scss';
 @import 'offset.scss';
 @import 'header.scss';
+@import 'login.scss';
 // global css config
-body {
-    font-family: 'Work Sans', 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', Arial, Verdana, sans-serif;
+@import 'reset.scss';
+
+// ./home
+
+.home-wrapper{
+    text-align: center;
 }
 
-body,
-html {
-    height: 100%;
-}
+// ./info 建议改名为main
 
 .client {
     height: 100vh;

@@ -8,9 +8,7 @@ import Button from 'material-ui/Button'
 import Login from './login'
 
 const styleSheet = createStyleSheet(theme => ({
-    outWrapper: {
-        textAlign: 'center'
-    }
+    
 }));
 
 @withStyles(styleSheet)

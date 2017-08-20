@@ -16,25 +16,14 @@ const styleSheet = createStyleSheet(theme => ({
   button: {
     margin: theme.spacing.unit,
   },
-  container: {
-    display: 'flex',
-    flexFlow: 'column',
-    margin: '0 auto',
-  },
   formControl: {
     margin: theme.spacing.unit,
   },
-  textField: {                           //r_添加
+  textField: {
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
     width: 200,
   },
-  paper: {
-    width: '250px',
-    display: 'inline-block',
-    verticalAlign: 'middle',
-    transform: 'translateY(50%)'
-  }
 }));
 
 @withStyles(styleSheet)
@@ -55,8 +44,8 @@ export default class Login extends React.Component {
     const classes = this.props.classes;
 
     return (
-      <Paper className={classes.paper}>
-        <div className={classes.container}>
+      <Paper className="login-page">
+        <div className="login-wrapper">
           <div>
             <FormControl className={classes.formControl}>
               <InputLabel htmlFor="username">Username</InputLabel>
