@@ -1,0 +1,11 @@
+.login-page {
+  display: inline-block;
+  transform: translateY(50%);
+  .login-wrapper {
+    display: flex;
+    flex-flow: column;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border-radius: 2px;
+  }
+}

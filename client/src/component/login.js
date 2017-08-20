@@ -16,19 +16,20 @@ const styleSheet = createStyleSheet(theme => ({
   button: {
     margin: theme.spacing.unit,
   },
-  container: {
-    display: 'flex',
-    flexWrap: 'row-reverse',
-  },
   formControl: {
     margin: theme.spacing.unit,
+  },
+  textField: {
+    marginLeft: theme.spacing.unit,
+    marginRight: theme.spacing.unit,
+    width: 200,
   },
 }));
 
 @withStyles(styleSheet)
 export default class Login extends React.Component {
   constructor(props) {
-      super(props)
+    super(props)
   }
   state = {
     name: '',
@@ -42,31 +43,33 @@ export default class Login extends React.Component {
   render() {
     const classes = this.props.classes;
 
-      return (
-        <div className={classes.container}>
-          <Paper>
+    return (
+      <Paper className="login-page">
+        <div className="login-wrapper">
+          <div>
             <FormControl className={classes.formControl}>
-              <InputLabel htmlFor="name-simple">Name</InputLabel>
-              <Input id="name-simple" value={this.state.name} onChange={this.handleChange} />
-              <FormHelperText>Some important helper text</FormHelperText>
+              <InputLabel htmlFor="username">Username</InputLabel>
+              <Input id="username" value={this.state.name} onChange={this.handleChange} />
+              <FormHelperText>* 用户名已存在/含有非法字符</FormHelperText>
             </FormControl>
-
-            <TextField
-              id="password"
-              label="Password"
-              type="password"
-              autoComplete="current-password"
-              margin="normal"
-            />
+          </div>
+          <div>
+            <FormControl className={classes.formControl}>
+              <InputLabel htmlFor="password">Password</InputLabel>
+              <Input id="password" />
+              <FormHelperText>* 请输入6-14位数字字母</FormHelperText>
+            </FormControl>
+          </div>
+          <div>
             <Button raised color="accent" className={classes.button}>
               Login
-            </Button>
+          </Button>
             <Button raised color="primary" className={classes.button}>
               Sign up
-            </Button>
-
-          </Paper>
+          </Button>
+          </div>
         </div>
-      )
-    }
+      </Paper>
+    )
+  }
 }
